@@ -1,6 +1,7 @@
 ### Robert Lupo
 
-ML and data engineer building production forecasting systems and AutoML tooling. I care about honest evaluation, calibrated predictions, and shipping things that actually work.
+I build data and AI tooling for finance teams, and I care about honest evaluation — calibrated
+predictions, stated uncertainty, and documented limits.
 
 Currently at Franklin Street (FP&A) | USF Statistics '24 | MIT Data Science
 
@@ -23,19 +24,35 @@ Currently at Franklin Street (FP&A) | USF Statistics '24 | MIT Data Science
 
 ---
 
-#### Featured Projects
+#### What I do at work
 
-| Project | What it does | Key numbers |
-|---------|-------------|-------------|
-| [kkbox-churn-prediction](https://github.com/robertlupo1997/kkbox-churn-prediction) | Full-stack churn prediction with React dashboard, FastAPI backend, 131 engineered features, and SHAP explanations. Strict temporal validation -- no data leakage. | **0.97 AUC**, 0.11 log loss, within 0.03 of Kaggle winners |
-| [hierarchical-revenue-forecast](https://github.com/robertlupo1997/hierarchical-revenue-forecast) | Multi-LOB revenue forecasting across 1,782 time series. Polyglot architecture (Python/Go/TypeScript), hierarchical reconciliation, SHAP explainability, Grafana monitoring. | **Sub-10ms** Go+ONNX inference, 0.48 RMSLE |
-| [open-vocabulary-object-detection](https://github.com/robertlupo1997/open-vocabulary-object-detection) | Text-prompted detection and segmentation with Grounding DINO + SAM 2. COCO evaluation with multiple prompt strategies. | **~265ms/img** on RTX 3070 |
+Full-stack financial tooling: a React/TypeScript + FastAPI consolidated P&L dashboard over
+three databases that replaced a 132-page printed monthly report, an auditable formula-driven
+narrative framework used across seven business lines, and production ETL automation for Oracle
+EPM with 114+ tests. I also led our Claude Enterprise rollout from 5 to 15 users — onboarding
+curriculum, prompt library, and the licensing business case.
+
+---
+
+#### Projects
+
+| Project | What it does | Status |
+|---------|-------------|--------|
+| [understudy](https://github.com/robertlupo1997/understudy) | Delegate scoped coding from Claude Code to a local Ollama model. Propose-only loop — nothing auto-merges — with a token-savings contract, sandboxed in a read-only worktree under `bwrap`. | Working, measured on one model, limits documented |
+| [kkbox-churn-prediction](https://github.com/robertlupo1997/kkbox-churn-prediction) | Churn prediction built around point-in-time feature engineering: DuckDB SQL that bounds every aggregation window on both sides, with tests asserting exact values at the 89/91-day boundaries. | Reported metrics are tuned-validation, not held-out — clean holdout evaluation in progress |
+| [hierarchical-revenue-forecast](https://github.com/robertlupo1997/hierarchical-revenue-forecast) | Polyglot forecasting stack over 1,782 retail **unit-sales** series — Python training, Go + ONNX serving, TypeScript dashboard. | Experimental. Current evaluator is rolling one-step; fixed-origin multi-horizon evaluation and hierarchical reconciliation are not yet wired into the pipeline |
+| [open-vocabulary-object-detection](https://github.com/robertlupo1997/open-vocabulary-object-detection) | Text-prompted detection and segmentation with Grounding DINO + SAM 2, evaluated on COCO. | Prototype — single-prompt path is the working one |
+
+Each repo has a `LIMITATIONS.md` describing what it does **not** do and what remains unverified.
+I'd rather you read that first.
 
 ---
 
 #### Currently Building
 
-**ferroml** -- Statistically rigorous AutoML framework in Rust with Python bindings. Proper cross-validation, hypothesis testing, and honest model comparison out of the box.
+**ferroml** — an AutoML framework in Rust with Python bindings. Currently does seeded
+cross-validated comparison of default model configurations; hyperparameter search and
+preprocessing integration are in progress, not finished.
 
 ---
 
