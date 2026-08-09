@@ -43,8 +43,8 @@ curriculum, prompt library, and the licensing business case.
 | [hierarchical-revenue-forecast](https://github.com/robertlupo1997/hierarchical-revenue-forecast) | Polyglot forecasting stack over 1,782 retail **unit-sales** series — Python training, Go + ONNX serving, TypeScript dashboard. | Experimental. Current evaluator is rolling one-step; fixed-origin multi-horizon evaluation and hierarchical reconciliation are not yet wired into the pipeline |
 | [open-vocabulary-object-detection](https://github.com/robertlupo1997/open-vocabulary-object-detection) | Text-prompted detection and segmentation with Grounding DINO + SAM 2, evaluated on COCO. | Prototype — single-prompt path is the working one |
 
-Each repo has a `LIMITATIONS.md` describing what it does **not** do and what remains unverified.
-I'd rather you read that first.
+The Status column is the honest one. Where a number is not yet reproducible from a clean clone,
+it says so rather than quoting it.
 
 ---
 
