@@ -3,7 +3,7 @@
 I build data and AI tooling for finance teams, and I care about honest evaluation — calibrated
 predictions, stated uncertainty, and documented limits.
 
-Currently at Franklin Street (FP&A) | USF Statistics '24 | MIT Data Science
+Currently doing solutions engineering in a corporate FP&A team (title: FP&A Analyst) | USF Statistics '24 | MIT Data Science
 
 ---
 
