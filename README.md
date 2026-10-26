@@ -41,21 +41,14 @@ account rather than as something you can check here.
 
 | Project | What it does | Status |
 |---------|-------------|--------|
+| [ferroml](https://github.com/robertlupo1997/ferroml) | Machine learning library in Rust with Python bindings (`pip install ferroml`). Every model ships with statistical diagnostics — confidence intervals, residual checks, assumption tests — and results are cross-checked against scikit-learn, SciPy and statsmodels. | Released on PyPI; known limitations listed in the README |
+| [half-blood-prince](https://github.com/robertlupo1997/half-blood-prince) | Has an LLM write margin notes into any PDF or EPUB, and refuses to draw a note it can't anchor to one exact quote. Every refusal is listed in the run report. | Working end to end; a real-model run on public-domain *Alice* placed 60 of 60 notes |
+| [kkbox-churn-prediction](https://github.com/robertlupo1997/kkbox-churn-prediction) | Churn prediction built around point-in-time feature engineering: DuckDB SQL that bounds every aggregation window on both sides, with tests asserting exact values at the 89/91-day boundaries. | Reported metrics are tuned-validation, not held-out — see LIMITATIONS.md |
 | [understudy](https://github.com/robertlupo1997/understudy) | Delegate scoped coding from Claude Code to a local Ollama model. Propose-only loop — nothing auto-merges — with a token-savings contract, sandboxed in a read-only worktree under `bwrap`. | Working, measured on one model, limits documented |
-| [kkbox-churn-prediction](https://github.com/robertlupo1997/kkbox-churn-prediction) | Churn prediction built around point-in-time feature engineering: DuckDB SQL that bounds every aggregation window on both sides, with tests asserting exact values at the 89/91-day boundaries. | Reported metrics are tuned-validation, not held-out — clean holdout evaluation in progress |
 | [hierarchical-revenue-forecast](https://github.com/robertlupo1997/hierarchical-revenue-forecast) | Polyglot forecasting stack over 1,782 retail **unit-sales** series — Python training, Go + ONNX serving, TypeScript dashboard. | Experimental. Current evaluator is rolling one-step; fixed-origin multi-horizon evaluation and hierarchical reconciliation are not yet wired into the pipeline |
-| open-vocabulary-object-detection (private repo) | Text-prompted detection and segmentation with Grounding DINO + SAM 2, evaluated on COCO. | Prototype — single-prompt path is the working one |
 
 The Status column is the honest one. Where a number is not yet reproducible from a clean clone,
 it says so rather than quoting it.
-
----
-
-#### Currently Building
-
-**ferroml** — an AutoML framework in Rust with Python bindings. Currently does seeded
-cross-validated comparison of default model configurations; hyperparameter search and
-preprocessing integration are in progress, not finished.
 
 ---
 
